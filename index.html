@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 반응형 웹을 위해 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <!-- 페이지 상단에 움직이는 텍스트를 표시하는 요소 -->
+    <div class="marquee"><span>Welcome JM's Site</span></div>
+
+    <!-- 게임 컨테이너, 캔버스와 버튼들을 포함 -->
+    <div class="game-container">
+      <!-- 게임 보드를 위한 캔버스 요소 -->
+      <canvas id="game-board" width="400" height="600"></canvas>
+
+      <!-- 게임 조작을 위한 버튼들 -->
+      <div class="buttons">
+        <button id="start-btn" class="start-button">Start Game</button>
+        <button id="skip-btn" class="skip-button">Go to Home</button>
+      </div>
+    </div>
+
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="js/game.js"></script>
+  </body>
+</html>

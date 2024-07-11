@@ -1,0 +1,93 @@
+/* 모든 요소에 대해 기본 스타일 초기화 */
+* {
+  margin: 0; /* 모든 요소의 마진 제거 */
+  padding: 0; /* 모든 요소의 패딩 제거 */
+  box-sizing: border-box; /* 모든 요소의 박스 크기 계산 방식을 border-box로 설정 (패딩과 테두리를 포함한 전체 너비와 높이 계산) */
+}
+
+/* 전체 페이지의 기본 스타일 */
+body {
+  background: #0f2027; /* 배경색: 어두운 색상 (그라디언트로 설정됨) */
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027); /* 수평 그라디언트 배경 색상 설정 */
+  display: flex; /* 플렉스 박스를 사용하여 요소를 배치 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  min-height: 100vh; /* 최소 높이를 뷰포트의 100%로 설정 */
+  color: #f5f5f5; /* 기본 글자 색상: 밝은 회색 */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* 폰트 패밀리 설정: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif */
+}
+
+/* Marquee (스크롤링 텍스트) 스타일 */
+.marquee {
+  position: absolute; /* 절대 위치 지정 */
+  top: 20%; /* 상단에서 20% 위치 */
+  width: 100%; /* 전체 너비를 차지 */
+  overflow: hidden; /* 내용이 컨테이너를 넘을 경우 숨김 */
+  white-space: nowrap; /* 텍스트가 줄 바꿈 없이 한 줄로 표시 */
+}
+
+/* Marquee 안의 스크롤링 텍스트 스타일 */
+.marquee span {
+  display: inline-block; /* 인라인 블록으로 텍스트를 표시 */
+  padding-left: 100%; /* 왼쪽에 100% 패딩 추가 (스크롤 시작 위치 조정) */
+  font-size: 6em; /* 폰트 크기 6em */
+  animation: marquee 7s linear infinite; /* 애니메이션 적용 (스크롤 효과) */
+}
+
+/* Marquee 애니메이션 정의 */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%); /* 애니메이션 시작 시, X축 변위 0% */
+  }
+  100% {
+    transform: translateX(-100%); /* 애니메이션 종료 시, X축 변위 -100% (텍스트가 왼쪽으로 완전히 이동) */
+  }
+}
+
+/* 게임 컨테이너 스타일 */
+.game-container {
+  background: #22303c; /* 배경색: 어두운 파란색 */
+  padding: 1.5rem; /* 모든 방향에 1.5rem 패딩 */
+  border-radius: 1rem; /* 둥근 모서리 (반지름 1rem) */
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); /* 그림자 효과 (0px 이동, 1rem 흐림, 반투명 검정색) */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  width: 450px; /* 고정 너비 450px */
+  display: flex; /* 플렉스 박스를 사용하여 자식 요소 배치 */
+  flex-direction: column; /* 세로 방향으로 배치 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  z-index: 10; /* z-index 설정 (다른 요소 위에 표시) */
+}
+
+/* 게임 보드 스타일 */
+#game-board {
+  background: #000; /* 배경색: 검정색 */
+  border: 2px solid #09c; /* 테두리: 두께 2px, 색상 #09c (밝은 파란색) */
+  margin-bottom: 1rem; /* 아래쪽 마진 1rem */
+}
+
+/* 버튼 컨테이너 스타일 */
+.buttons {
+  display: flex; /* 플렉스 박스를 사용하여 자식 버튼들을 배치 */
+  flex-direction: column; /* 버튼들을 세로 방향으로 배치 */
+  gap: 10px; /* 버튼들 사이의 간격 10px */
+}
+
+/* 시작 버튼 스타일 */
+.start-button,
+.skip-button {
+  background-color: #ff7f50; /* 배경색: 주황색 */
+  border: none; /* 기본 테두리 제거 */
+  color: white; /* 글자 색상: 흰색 */
+  padding: 0.75rem 1.5rem; /* 상하 패딩 0.75rem, 좌우 패딩 1.5rem */
+  font-size: 1rem; /* 폰트 크기 1rem */
+  cursor: pointer; /* 마우스 커서가 손 모양으로 변경 */
+  border-radius: 0.5rem; /* 둥근 모서리 (반지름 0.5rem) */
+  transition: background-color 0.3s ease; /* 배경색 변화에 0.3초, ease 전환 효과 */
+}
+
+/* 버튼 호버 상태 스타일 */
+.start-button:hover,
+.skip-button:hover {
+  background-color: #ff6347; /* 호버 시 배경색: 붉은 주황색 */
+}

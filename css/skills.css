@@ -1,0 +1,73 @@
+/* Skills 섹션 스타일 */
+#skills {
+  background-color: #ffd700; /* 배경색: 황금색 */
+  padding: 50px 20px; /* 상하 패딩 50px, 좌우 패딩 20px */
+}
+
+/* Skills 섹션 내부 컨테이너 스타일 */
+#skills .container {
+  max-width: 1200px; /* 최대 너비 1200px */
+  margin: 0 auto; /* 수평 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* Skills 섹션의 제목 스타일 */
+#skills h2 {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  font-size: 2.5em; /* 폰트 크기 2.5em */
+  margin-bottom: 30px; /* 아래 마진 30px */
+  border-bottom-color: #333; /* 하단 테두리 색상: 어두운 회색 */
+  border-bottom: 1px solid; /* 하단 테두리 두께 1px */
+  line-height: 3; /* 줄 높이 3 */
+}
+
+/* Skills 섹션의 그리드 레이아웃 스타일 */
+.skills-grid {
+  display: flex; /* 플렉스 박스 레이아웃 */
+  justify-content: space-around; /* 요소들 사이에 공간을 균등하게 배분 */
+  flex-wrap: wrap; /* 항목들이 줄 바꿈되도록 설정 */
+}
+
+/* 각 스킬 항목의 컬럼 스타일 */
+.skills-column {
+  background: white; /* 배경색: 흰색 */
+  border-radius: 10px; /* 둥근 모서리 (반지름 10px) */
+  padding: 20px; /* 모든 방향에 20px 패딩 */
+  margin: 10px; /* 모든 방향에 10px 마진 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
+  flex: 1; /* 플렉스 아이템으로서의 비율 1 */
+  min-width: 350px; /* 최소 너비 350px */
+  max-width: 500px; /* 최대 너비 500px */
+}
+
+/* 스킬 컬럼의 호버 상태 스타일 */
+.skills-column:hover {
+  transform: scale(1.05); /* 호버 시 약간 확대 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 더 강한 그림자 효과 */
+}
+
+/* 스킬 컬럼의 제목 스타일 */
+.skills-column h3 {
+  color: #ff4500; /* 제목 텍스트 색상: 오렌지색 */
+  margin-bottom: 15px; /* 아래 마진 15px */
+  font-size: 30px; /* 폰트 크기 30px */
+}
+
+/* 스킬 컬럼의 리스트 스타일 */
+.skills-column ul {
+  list-style: none; /* 리스트 스타일 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+/* 스킬 컬럼의 리스트 항목 스타일 */
+.skills-column ul li {
+  display: flex; /* 플렉스 박스 레이아웃 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin-bottom: 10px; /* 아래 마진 10px */
+}
+
+/* 스킬 컬럼의 리스트 항목 이미지 스타일 */
+.skills-column ul li img {
+  display: block; /* 블록 레이아웃 */
+  margin: 0 auto; /* 수평 중앙 정렬 */
+}
